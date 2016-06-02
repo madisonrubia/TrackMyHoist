@@ -1,0 +1,12 @@
+<h1>Students</h1>
+<a href="/students/new">Add a new student</a>
+<% if @students.any? %>
+<!-- list of students in database -->
+<ul>
+<% for @student in @students %>
+  <li><a href="/students/<%= @student.id %>"><%= @student.name %></a></li>
+<% end %>
+</ul>
+<% else %>
+  <p>No students have been added yet!</p>
+<% end %>
